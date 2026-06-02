@@ -56,11 +56,11 @@ Why: This tells the procurement team exactly what their new, lower order numbers
 
 4. Total Unlocked Cash:
 What to compute: The running sum of all the budget saved across those slow months.
-Why: This is the final scorecard value that proves to the executives that we successfully freed up the target $\$12\text{M}$ and brought total inventory exposure under $\$50\text{M}$.
+Why: This is the final scorecard value that proves to the executives that we successfully freed up the target $12M and brought total inventory exposure under $50.
 
 5. visuals:
 Seasonal Demand Line Chart: A monthly timeline plot highlighting the sharp seasonal drops (valleys) where we can safely reduce orders.
 Category Spend Breakdown (Bar Chart): Comparing the total tied-up capital between Packaging vs. Chemicals to see which category offers the fastest savings.
-Target vs. Actual Gauge/Bullet Chart: A simple visual tracker showing leadership how close the proposed cuts get us to freeing up the $\$12\text{M}$ goal.
+Target vs. Actual Gauge/Bullet Chart: A simple visual tracker showing leadership how close the proposed cuts get us to freeing up the $12 goal.
 
 ## Insights
