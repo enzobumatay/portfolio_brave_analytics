@@ -56,7 +56,7 @@ To validate the strategy during consultation, the analysis will focus on specifi
 
 #### 2. Values to Compute
 *   **Monthly Financial Demand:** Total capital value demanded by customers per calendar month.  
-    *   *Formula:* $\sum (\text{Demand\_Qty} \times \text{Unit\_Cost})$ grouped by Month.
+    *   *Formula:* Summation(Demand_Qty * Unit Cost) grouped by Month.
     *   *Columns:* `Date`, `Demand_Qty`, `Unit_Cost`
 *   **Average Monthly Baseline:** The typical demand benchmark used to systematically separate "low-demand" months from high-demand months.  
     *   *Formula:* Average (Mean) of the monthly financial demand values.
