@@ -54,7 +54,7 @@ Why: This tells us exactly how much customer demand drops during the slow season
 What to compute: The difference between our current normal order size and the new, reduced order size for those slow months.
 Why: This tells the procurement team exactly what their new, lower order numbers should be when writing contracts with suppliers.
 
-4. Total Unlocked Cash ($):
+4. Total Unlocked Cash:
 What to compute: The running sum of all the budget saved across those slow months.
 Why: This is the final scorecard value that proves to the executives that we successfully freed up the target $\$12\text{M}$ and brought total inventory exposure under $\$50\text{M}$.
 
