@@ -1,5 +1,5 @@
 # Inventory Optimization
-## Problem Statement
+## ❔Problem Statement
 Our business currently has ~$61.M tied up in excess Packaging and Chemicals inventory, which significantly restricts our free cash flow. The goal is to reduce this frozen capital by over $12M, bringing our total category exposure down to under $50M without risking stockouts.
 
 _Which months show the lowest customer demand for Packaging and Chemicals, allowing us to safely cut back our order sizes and free up that $12M?_  
@@ -8,12 +8,12 @@ _Which months show the lowest customer demand for Packaging and Chemicals, allow
 
 The dataset contains transactional and master data for our organization's supply chain network. It tracks **500 unique products (SKUs)** across **3 physical warehouses**, monitoring historical customer demand alongside daily warehouse inventory movements.
 
-####1. The Core Analytical Sheets (Used for this Project)
+#### 1. The Core Analytical Sheets (Used for this Project)
 These sheets contain the historical timelines and financial figures needed to optimize our inventory and free up frozen capital:
 *   **`Daily_Demand` (10,000 Rows):** A comprehensive log tracking exactly how many units of each product customers requested per day. This serves as our source of truth for identifying seasonal customer buying waves and finding the "slow months."
 *   **`Product_Master` (500 Rows):** A catalog of every product handled by the company, detailing its broader category (such as *Packaging* and *Chemicals*) and its wholesale unit cost. This allows us to convert physical stock volume into actual corporate dollars to isolate exactly where cash flow is bottlenecked.
 
-####2. Supporting Network Sheets
+#### 2. Supporting Network Sheets
 These sheets provide operational context regarding how inventory moves through the supply chain and where it physically sits:
 *   **`Inventory_Transactions` (5,000 Rows):** A ledger of warehouse floor activities tracking inventory coming in from suppliers (`IN`) and inventory leaving to fulfill orders (`OUT`), while monitoring the remaining safety stock levels.
 *   **`Warehouse_Master` (3 Rows):** A structural table defining the three distribution hubs (`WH1`, `WH2`, `WH3`) and their maximum physical storage capacity thresholds.
