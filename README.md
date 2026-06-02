@@ -42,6 +42,43 @@ To answer the core analysis question, data is extracted from the primary sheets 
 3.  **Identify Seasonality:** Aggregate and plot the calculated financial baseline across the `Date` column by month to highlight predictable demand drops (the target "slow seasons").
 
 ## Methodologies
+### 📈 Key Metrics, Analysis, and Visualizations
 
+To validate the strategy during consultation, the analysis will focus on specific operational indicators, metrics, and visual tools:
+
+#### 1. Key Performance Indicators (KPIs)
+*   **Total Trapped Capital ($):** Quantifies the absolute corporate dollar value currently frozen in warehouse inventory.  
+    *   *Columns:* `Demand_Qty`, `Unit_Cost`, `Category`
+*   **Monthly Demand Volatility (%):** Identifies demand fluctuations, comparing peak consumption months against target slow periods.  
+    *   *Columns:* `Date`, `Demand_Qty`
+*   **Free Cash Flow Potential ($):** Tracks total projected dollar savings achievable during low-demand months to monitor progress toward the target.  
+    *   *Columns:* `Demand_Qty`, `Unit_Cost`
+
+#### 2. Values to Compute
+*   **Monthly Financial Demand:** Total capital value demanded by customers per calendar month.  
+    *   *Formula:* $\sum (\text{Demand\_Qty} \times \text{Unit\_Cost})$ grouped by Month.
+    *   *Columns:* `Date`, `Demand_Qty`, `Unit_Cost`
+*   **Average Monthly Baseline:** The typical demand benchmark used to systematically separate "low-demand" months from high-demand months.  
+    *   *Formula:* Average (Mean) of the monthly financial demand values.
+    *   *Columns:* `Demand_Qty`, `Unit_Cost`
+*   **Potential Capital Release:** The direct cash savings retained by reducing purchasing budgets during slower months.  
+    *   *Formula:* Current Monthly Spend $-$ Proposed Reduced Spend Target.
+    *   *Columns:* `Demand_Qty`, `Unit_Cost`
+
+#### 3. Statistical Analysis Approaches
+*   **Time-Series Aggregation:** Summarizing daily granular transaction details into clear, high-level monthly calendar timeframes.  
+    *   *Columns:* `Date`, `Demand_Qty`
+*   **Descriptive Statistics (Min/Max/Mean):** Pinpointing the historic demand floor (valleys) and demand ceilings (peaks) across the timeline.  
+    *   *Columns:* `Demand_Qty`, `Unit_Cost`
+*   **Percentage-from-Baseline Analysis:** Calculating how far below the average baseline a slow month drops to justify the exact scale of the procurement cutback safely.  
+    *   *Columns:* `Date`, `Demand_Qty`
+
+#### 4. Proposed Stakeholder Visualizations
+*   **Seasonal Demand Line Chart:** A monthly timeline visualization highlighting the sharp seasonal valleys where purchasing orders can be safely dialed back.  
+    *   *Columns:* `Date` (X-axis), *Calculated Monthly Financial Demand* (Y-axis)
+*   **Category Spend Breakdown (Bar Chart):** A side-by-side comparison of total tied-up capital between Packaging vs. Chemicals to reveal which category offers the fastest route to savings.  
+    *   *Columns:* `Category` (X-axis), *Total Financial Value* (Y-axis)
+*   **Target vs. Actual Bullet Chart:** A straightforward linear tracker showing executive leadership exactly how much of the target **$\$12\text{M}$** capital has been successfully unlocked.  
+    *   *Columns:* *Calculated Potential Capital Release*
 
 ## Insights
