@@ -43,10 +43,12 @@ To answer the core analysis question, data is extracted from the primary sheets 
 
 ## Methodologies
 1. Monthly Category Spend ($):
+
 What to compute: The total dollar value of customer demand for each month, specifically filtered for Packaging and Chemicals.
 Why: This maps our baseline timeline so we can easily spot the high peaks and low valleys.
 
 2. The Demand Floor (The "Low" Benchmark):
+
 What to compute: The average (mean) monthly demand vs. the lowest-performing month's demand.
 Why: This tells us exactly how much customer demand drops during the slow season so we know how deep we can cut our order sizes without causing a stockout.
 
