@@ -43,7 +43,6 @@ To answer the core analysis question, data is extracted from the primary sheets 
 
 ## Methodologies
 1. Monthly Category Spend ($):
-
 What to compute: The total dollar value of customer demand for each month, specifically filtered for Packaging and Chemicals.
 Why: This maps our baseline timeline so we can easily spot the high peaks and low valleys.
 
