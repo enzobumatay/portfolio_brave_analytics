@@ -2,8 +2,6 @@
 ## ❔Problem Statement
 Our business currently has ~$61.M tied up in excess Packaging and Chemicals inventory, which significantly restricts our free cash flow. The goal is to reduce this frozen capital by over $12M, bringing our total category exposure down to under $50M without risking stockouts.
 
-_Which months show the lowest customer demand for Packaging and Chemicals, allowing us to safely cut back our order sizes and free up that $12M?_  
-
 ## 📊 Dataset Description
 
 The dataset contains transactional and master data for our organization's supply chain network. It tracks **500 unique products (SKUs)** across **3 physical warehouses**, monitoring historical customer demand alongside daily warehouse inventory movements.
