@@ -37,9 +37,12 @@ To ensure that cutting $50M of frozen capital does not lead to operational stock
 * **Lead-Time vs. Excess Correlation:** Analyzing the relationship between a supplier's `Lead_Time_Days` and the volume of excess inventory held for their products to determine if over-ordering is a coping mechanism for unreliable vendor nodes.
 * **Demand Buffer Testing:** Simulating stock reductions against historical `Demand_Qty` values to confirm that optimized inventory targets can safely absorb peak consumption periods without dropping into a deficit.
 
-**5. visuals:**
-Seasonal Demand Line Chart: A monthly timeline plot highlighting the sharp seasonal drops (valleys) where we can safely reduce orders.
-Category Spend Breakdown (Bar Chart): Comparing the total tied-up capital between Packaging vs. Chemicals to see which category offers the fastest savings.
-Target vs. Actual Gauge/Bullet Chart: A simple visual tracker showing leadership how close the proposed cuts get us to freeing up the $12 goal.
+**5. Data Visualizations**
+* **Donut Chart** - Breaks down the allocation of frozen capital across the different product categories to identify the heaviest categories.
+* **Horizontal Bar Chart** - Ranks the Top 10 worst-offending SKUs by excess dollar value to target immediate, high-impact reductions.
+* **Map / Bubble Visual** - Shows the distribution of frozen capital across regional warehouse hubs to spot geographic over-accumulation.
+* **Scatter Plot** - Maps Lead Time Days against Excess Stock Value for all SKUs to analyze if long vendor lead times are driving over-ordering behaviors.
+* **Stacked Bar Chart** - Segregates frozen capital by Vendor Contract Type and Supplier Rating to uncover structural procurement bottlenecks.
+* **Interactive Matrix Table** - A row-by-row planner worksheet detailing SKU-level metrics, including Current Stock vs. Safety Stock, Over-Target Units, Potential Dollar Savings, and calculated Stockout Risk Levels.
 
 ## Insights
