@@ -1,6 +1,6 @@
 # Inventory Optimization
 ## ❔Problem Statement
-Our company currently has around $344M tied up in excess material inventory exceeding safety stock baselines, which significantly restricts our free cash flow. The goal is to reduce this frozen capital by over $12M, bringing our total category exposure down without risking operational stockouts.
+Our company currently has around $344M tied up in excess material inventory exceeding safety stock baselines, which significantly restricts our free cash flow. The goal is to reduce this frozen capital by over $50M, bringing our total category exposure down without risking operational stockouts.
 
 ## 📊 Dataset Description
 
