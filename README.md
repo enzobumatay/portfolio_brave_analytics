@@ -1,6 +1,6 @@
 # Inventory Optimization
 ## ❔Problem Statement
-Our business currently has around $62M tied up in excess Packaging and Chemicals inventory, which significantly restricts our free cash flow. The goal is to reduce this frozen capital by over $12M, bringing our total category exposure down to under $50M without risking stockouts.
+Our company currently has around $344M tied up in excess material inventory exceeding safety stock baselines, which significantly restricts our free cash flow. The goal is to reduce this frozen capital by over $12M, bringing our total category exposure down without risking operational stockouts.
 
 ## 📊 Dataset Description
 
