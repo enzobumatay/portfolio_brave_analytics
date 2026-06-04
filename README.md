@@ -38,11 +38,23 @@ To ensure that cutting $50M of frozen capital does not lead to operational stock
 * **Demand Buffer Testing:** Simulating stock reductions against historical `Demand_Qty` values to confirm that optimized inventory targets can safely absorb peak consumption periods without dropping into a deficit.
 
 **5. Data Visualizations**
-* **Donut Chart** - Breaks down the allocation of frozen capital across the different product categories to identify the heaviest categories.
-* **Horizontal Bar Chart** - Ranks the Top 10 worst-offending SKUs by excess dollar value to target immediate, high-impact reductions.
-* **Map / Bubble Visual** - Shows the distribution of frozen capital across regional warehouse hubs to spot geographic over-accumulation.
-* **Scatter Plot** - Maps Lead Time Days against Excess Stock Value for all SKUs to analyze if long vendor lead times are driving over-ordering behaviors.
-* **Stacked Bar Chart** - Segregates frozen capital by Vendor Contract Type and Supplier Rating to uncover structural procurement bottlenecks.
-* **Interactive Matrix Table** - A row-by-row planner worksheet detailing SKU-level metrics, including Current Stock vs. Safety Stock, Over-Target Units, Potential Dollar Savings, and calculated Stockout Risk Levels.
+* **Donut Chart**
+  * *Purpose:* Identifies which product categories hold the highest share of trapped cash.
+  * *Metrics:* Frozen Capital % by Category.
+* **Horizontal Bar Chart**
+  * *Purpose:* Targets immediate cost-cutting by ranking the worst individual products.
+  * *Metrics:* Top 10 SKUs by Excess Dollar Value.
+* **Map / Bubble Visual**
+  * *Purpose:* Spotlights geographic stock imbalances across regional facilities.
+  * *Metrics:* Frozen Capital Distribution by Warehouse.
+* **Scatter Plot**
+  * *Purpose:* Correlates vendor behaviors with over-ordering tendencies.
+  * *Metrics:* Lead Time Days vs. Excess Stock Value.
+* **Stacked Bar Chart**
+  * *Purpose:* Exposes procurement constraints tied to vendor tiers and agreement structures.
+  * *Metrics:* Frozen Capital by Contract Type and Supplier Rating.
+* **Interactive Matrix Table**
+  * *Purpose:* Serves as an operational worksheet for planners to execute SKU-level reductions.
+  * *Metrics:* SKU, Current Stock vs. Safety Stock, Over-Target Units, Dollar Savings, and Stockout Risk.
 
 ## Insights
