@@ -4,58 +4,38 @@ Our company currently has around $344M tied up in excess material inventory exce
 
 ## 📊 Dataset Description
 
-The dataset contains transactional and master data for our organization's supply chain network. It tracks **500 unique products (SKUs)** across **3 physical warehouses**, monitoring historical customer demand alongside daily warehouse inventory movements.
+The dataset consists of five tables partitioned into dimensional reference tables and transaction logs, tracking 300 active SKUs, 50 global vendors, and 4 regional hubs. It bridges downstream fulfillment requirements against upstream supply logs to identify excess stock relative to baseline safety margins.
 
-#### 1. The Core Analytical Sheets (Used for this Project)
-These sheets contain the historical timelines and financial figures needed to optimize our inventory and free up frozen capital:
-*   **`Daily_Demand` (10,000 Rows):** A comprehensive log tracking exactly how many units of each product customers requested per day. This serves as our source of truth for identifying seasonal customer buying waves and finding the "slow months."
-*   **`Product_Master` (500 Rows):** A catalog of every product handled by the company, detailing its broader category (such as *Packaging* and *Chemicals*) and its wholesale unit cost. This allows us to convert physical stock volume into actual corporate dollars to isolate exactly where cash flow is bottlenecked.
+### Table Summaries
 
-#### 2. Supporting Network Sheets
-These sheets provide operational context regarding how inventory moves through the supply chain and where it physically sits:
-*   **`Inventory_Transactions` (5,000 Rows):** A ledger of warehouse floor activities tracking inventory coming in from suppliers (`IN`) and inventory leaving to fulfill orders (`OUT`), while monitoring the remaining safety stock levels.
-*   **`Warehouse_Master` (3 Rows):** A structural table defining the three distribution hubs (`WH1`, `WH2`, `WH3`) and their maximum physical storage capacity thresholds.
-*   **`Supplier_Master` (50 Rows):** A vendor profile list tracking the names, geographic locations, contractual agreements, and performance ratings of the company's third-party suppliers.
+* **`Product_Master` (Dimension)** - Contains static item attributes (SKU, Product_Name, Category, Storage_Type), procurement rules (Lead_Time_Days, Min_Order_Qty), and financial baselines (Unit_Cost, Safety_Stock_Level) used to determine the exact threshold for capital overages.
+* **`Supplier_Master` (Dimension)** - Captures corporate identities (Supplier_Name), geographic origins (Country), rating tiers (Supplier_Rating), and contract types to audit structural network vulnerabilities.
+* **`Warehouse_Master` (Dimension)** - Manages localized distribution properties, identifying explicit facility codes (WH1–WH4) and their volumetric capacities.
+* **`Inventory_Transactions` (Fact)** - A dynamic activity log recording individual stock movements (Transaction_Type, Quantity) and post-transaction running stock levels (Current_Stock) to flag systemic deficits.
+* **`Daily_Demand` (Fact)** - Tracks historical consumer fulfillment signals (Demand_Qty) and logs systematic metadata markers (Data_Quality_Flag) to isolate structural gaps without losing entry integrity.
 
----
+# 🔍 Analytical Approach & Methodologies
 
-### 🛠️ Sheets & Columns
+### 1. Data Ingestion & Engineering (Python Staging Pipeline)
+Before conducting any analysis, the raw data from our five source tables must be standardized and cleansed to ensure complete data integrity.
+* **Systematic Cleaning:** Processing incoming transaction and demand records to eliminate duplicate entries and align date fields to a uniform `MM/DD/YYYY` timeline structure.
+* **Missing Data Imputation:** Rather than dropping incomplete records and losing valuable operational context, rows with missing values (such as the 48 rows in `Daily_Demand`) are systematically flagged as "Missing Data" to isolate the gaps without skewing totals.
+* **Anomaly Identification:** Building logical checks within the python data pipeline to automatically isolate and flag systemic operational defects, such as the negative balances observed on `SKU0001` and `SKU0091`.
 
-To answer the core analysis question, data is extracted from the primary sheets and mapped to specific business purposes below:
+### 2. Relational Data Modeling (Power BI Star Schema)
+To enable fast, intuitive slicing of complex data points across different business angles, the data is structured into an optimized Star Schema model within Power BI.
+* **Dimensional Modeling:** Separating static lookup tables (`Product_Master`, `Supplier_Master`, `Warehouse_Master`) from dynamic event logs (`Inventory_Transactions`, `Daily_Demand`).
+* **Relationship Optimization:** Establishing strict 1-to-Many (`1:*`) relationships with active filters flowing from the dimension tables down to the fact tables, ensuring that any visual slice by category, supplier, or location immediately updates calculations correctly.
 
-| Source Sheet | Column Name | Business Description / Purpose |
-| :--- | :--- | :--- |
-| **Product Master** | `SKU` | The unique product ID used to link our product details to our daily sales records. |
-| **Product Master** | `Category` | Used to filter our data down exclusively to **Packaging** and **Chemicals**. |
-| **Product Master** | `Unit_Cost` | The dollar price of a single item, used to calculate how much cash is frozen. |
-| **Daily Demand** | `Date` | Used to group our sales data by **Month** so we can spot the slow seasons. |
-| **Daily Demand** | `Demand_Qty` | The physical number of items customers bought, showing us exactly when demand drops. |
+### 3. Quantitative Financial Analytics (Overage Isolation)
+The core diagnostic mechanism of this project relies on bridging financial metrics against operational guardrails to expose exact capital blockages.
+* **Capital Cost Multipliers:** Utilizing the `Unit_Cost` variable from the product master as a baseline financial weight against physical stock quantities.
+* **Safety Stock Baselines:** Comparing actual historical transaction balances against the fixed `Safety_Stock_Level` thresholds. Any volume sitting above this baseline is mathematically isolated as "Frozen Capital," allowing us to pinpoint precisely where the $344M is stuck.
 
----
-
-## 🚀 Analytical Approach
-
-1.  **Filter:** Isolate the data entries belonging exclusively to the `Packaging` and `Chemicals` product categories.
-2.  **Calculate Financial Impact:** Multiply `Demand_Qty` by `Unit_Cost` to translate physical item quantities into total capital value.
-3.  **Identify Seasonality:** Aggregate and plot the calculated financial baseline across the `Date` column by month to highlight predictable demand drops (the target "slow seasons").
-
-## Methodologies
-1. Monthly Category Spend ($):
-What to compute: The total dollar value of customer demand for each month, specifically filtered for Packaging and Chemicals.
-Why: This maps our baseline timeline so we can easily spot the high peaks and low valleys.
-
-2. The Demand Floor (The "Low" Benchmark):
-
-What to compute: The average (mean) monthly demand vs. the lowest-performing month's demand.
-Why: This tells us exactly how much customer demand drops during the slow season so we know how deep we can cut our order sizes without causing a stockout.
-
-3. The Purchasing Reduction Target (The "Trim"):
-What to compute: The difference between our current normal order size and the new, reduced order size for those slow months.
-Why: This tells the procurement team exactly what their new, lower order numbers should be when writing contracts with suppliers.
-
-4. Total Unlocked Cash:
-What to compute: The running sum of all the budget saved across those slow months.
-Why: This is the final scorecard value that proves to the executives that we successfully freed up the target $12M and brought total inventory exposure under $50.
+### 4. Supply Chain Risk & Bottleneck Diagnosis
+To ensure that cutting $50M of frozen capital does not lead to operational stockouts, the approach blends financial cleanup with supply chain safety metrics.
+* **Lead-Time vs. Excess Correlation:** Analyzing the relationship between a supplier's `Lead_Time_Days` and the volume of excess inventory held for their products to determine if over-ordering is a coping mechanism for unreliable vendor nodes.
+* **Demand Buffer Testing:** Simulating stock reductions against historical `Demand_Qty` values to confirm that optimized inventory targets can safely absorb peak consumption periods without dropping into a deficit.
 
 5. visuals:
 Seasonal Demand Line Chart: A monthly timeline plot highlighting the sharp seasonal drops (valleys) where we can safely reduce orders.
