@@ -14,7 +14,7 @@ The dataset consists of five tables partitioned into dimensional reference table
 * **`Inventory_Transactions` (Fact)** - A dynamic activity log recording individual stock movements (Transaction_Type, Quantity) and post-transaction running stock levels (Current_Stock) to flag systemic deficits.
 * **`Daily_Demand` (Fact)** - Tracks historical consumer fulfillment signals (Demand_Qty) and logs systematic metadata markers (Data_Quality_Flag) to isolate structural gaps without losing entry integrity.
 
-# 🔍 Analytical Approach & Methodologies
+## 🔍 Analytical Approach & Methodologies
 
 ### 1. Data Ingestion & Engineering (Python Staging Pipeline)
 Before conducting any analysis, the raw data from our five source tables must be standardized and cleansed to ensure complete data integrity.
