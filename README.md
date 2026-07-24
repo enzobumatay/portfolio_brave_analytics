@@ -32,3 +32,6 @@ Data Cleaning & Modeling, KPI Development, Business Analysis, Executive Reportin
 
 ### Dashboard Sample: 
 [Frozen Capital Dashboard](Frozen%20Capital_dashboard.pdf)
+
+### Dataset:
+[Sample Dataset](Project_Frozen_Capital_sample%20dataset.xlsx)
