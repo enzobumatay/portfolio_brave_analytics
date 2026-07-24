@@ -27,6 +27,8 @@ Python, Power BI, Excel
 ## Skills
 Data Cleaning & Modeling, KPI Development, Business Analysis, Executive Reporting
 
-## Code: [Data Cleanup](Frozen_Capital_Proj_Data_Cleanup.ipynb)
+## Code: 
+[Data Cleanup](Frozen_Capital_Proj_Data_Cleanup.ipynb)
 
-## Dashboard Sample: [Frozen Capital Dashboard])(Frozen Capital.pbix)
+## Dashboard Sample: 
+[Frozen Capital Dashboard](Frozen Capital_dashboard.pdf)
