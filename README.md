@@ -1,25 +1,16 @@
 # Inventory Optimization
 ## ❔Problem Statement
-Our company currently has around $344M tied up in excess material inventory exceeding safety stock baselines, which significantly restricts our free cash flow. The goal is to reduce this frozen capital by over $50M, bringing our total category exposure down without risking operational stockouts.
+The company held approximately $21.0M in inventory, with nearly 75% ($15.7M) tied up as frozen capital due to excess stock beyond target inventory levels. The objective was to identify the highest-impact inventory optimization opportunities and evaluate reduction scenarios that could unlock working capital while maintaining adequate stock coverage.
 
 ## 📊 Dataset Description
 
-The dataset consists of five tables partitioned into dimensional reference tables and transaction logs, tracking 300 active SKUs, 50 global vendors, and 4 regional hubs. It bridges downstream fulfillment requirements against upstream supply logs to identify excess stock relative to baseline safety margins.
-
-### Table Summaries
-
-* **`Product_Master` (Dimension)** - Contains static item attributes (SKU, Product_Name, Category, Storage_Type), procurement rules (Lead_Time_Days, Min_Order_Qty), and financial baselines (Unit_Cost, Safety_Stock_Level) used to determine the exact threshold for capital overages.
-* **`Supplier_Master` (Dimension)** - Captures corporate identities (Supplier_Name), geographic origins (Country), rating tiers (Supplier_Rating), and contract types to audit structural network vulnerabilities.
-* **`Warehouse_Master` (Dimension)** - Manages localized distribution properties, identifying explicit facility codes (WH1–WH4) and their volumetric capacities.
-* **`Inventory_Transactions` (Fact)** - A dynamic activity log recording individual stock movements (Transaction_Type, Quantity) and post-transaction running stock levels (Current_Stock) to flag systemic deficits.
-* **`Daily_Demand` (Fact)** - Tracks historical consumer fulfillment signals (Demand_Qty) and logs systematic metadata markers (Data_Quality_Flag) to isolate structural gaps without losing entry integrity.
+The analysis was built on a relational inventory dataset consisting of transactional inventory records and dimensional reference tables, covering 300+ active SKUs, 50 suppliers, 4 regional distribution centers, and historical demand, purchasing, and stock movement data. The model integrates product, supplier, warehouse, and inventory transactions to evaluate excess inventory against target stock levels and quantify frozen capital across the supply chain.
 
 ## 🔍 Analytical Approach & Methodologies
 
 **1. Data Ingestion & Engineering (Python Staging Pipeline)***
 Before conducting any analysis, the raw data from our five source tables must be standardized and cleansed to ensure complete data integrity.
 * **Systematic Cleaning:** Processing incoming transaction and demand records to eliminate duplicate entries and align date fields to a uniform `MM/DD/YYYY` timeline structure.
-* **Missing Data Imputation:** Rather than dropping incomplete records and losing valuable operational context, rows with missing values (such as the 48 rows in `Daily_Demand`) are systematically flagged as "Missing Data" to isolate the gaps without skewing totals.
 * **Anomaly Identification:** Building logical checks within the python data pipeline to automatically isolate and flag systemic operational defects, such as the negative balances observed on `SKU0001` and `SKU0091`.
 
 **2. Relational Data Modeling (Power BI Star Schema)**
