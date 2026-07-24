@@ -8,10 +8,13 @@ The analysis was built on a relational inventory dataset consisting of transacti
 ## 🔍 Analytical Approach & Methodologies
 **Dataset Familiarization:**
 Explored the relational inventory dataset to understand the business process, data structure, key entities, and relationships between inventory transactions and reference tables.
+
 **Data Cleaning & Preparation:**
 Used Python (Pandas) to clean, validate, and transform the raw data by handling missing values, correcting inconsistencies, standardizing formats, and preparing analysis-ready datasets.
+
 **Data Modeling & Dashboard Development:**
 Built a dimensional data model in Power BI, created DAX measures and KPIs to quantify frozen capital, inventory performance, and working capital release scenarios, and designed an interactive dashboard for executive reporting.
+
 **Business Insights & Recommendations:**
 Analyzed inventory trends to identify excess stock, prioritize high-impact SKUs, evaluate inventory reduction scenarios, and develop actionable recommendations for optimizing working capital.
 
