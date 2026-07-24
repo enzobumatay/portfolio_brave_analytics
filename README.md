@@ -1,11 +1,11 @@
 # Inventory Optimization
-### ❔Problem Statement
+### Problem Statement
 The company held approximately $21.0M in inventory, with nearly 75% ($15.7M) tied up as frozen capital due to excess stock beyond target inventory levels. The objective was to identify the highest-impact inventory optimization opportunities and evaluate reduction scenarios that could unlock working capital while maintaining adequate stock coverage.
 
-### 📊 Dataset Description
+### Dataset Description
 The analysis was built on a relational inventory dataset consisting of transactional inventory records and dimensional reference tables, covering 300+ active SKUs, 50 suppliers, 4 regional distribution centers, and historical demand, purchasing, and stock movement data. The model integrates product, supplier, warehouse, and inventory transactions to evaluate excess inventory against target stock levels and quantify frozen capital across the supply chain.
 
-### 🔍 Analytical Approach & Methodologies
+### Analytical Approach & Methodologies
 **Dataset Familiarization:**
 Explored the relational inventory dataset to understand the business process, data structure, key entities, and relationships between inventory transactions and reference tables.
 
