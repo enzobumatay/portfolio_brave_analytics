@@ -5,6 +5,9 @@ The company held approximately $21.0M in inventory, with nearly 75% ($15.7M) tie
 ### Dataset Description
 The analysis was built on a relational inventory dataset consisting of transactional inventory records and dimensional reference tables, covering 300+ active SKUs, 50 suppliers, 4 regional distribution centers, and historical demand, purchasing, and stock movement data. The model integrates product, supplier, warehouse, and inventory transactions to evaluate excess inventory against target stock levels and quantify frozen capital across the supply chain.
 
+<img width="1166" height="1600" alt="image" src="https://github.com/user-attachments/assets/89148d24-9419-4308-bc87-873e228d5039" />
+
+
 ### Analytical Approach & Methodologies
 **Dataset Familiarization:**
 Explored the relational inventory dataset to understand the business process, data structure, key entities, and relationships between inventory transactions and reference tables.
@@ -14,6 +17,8 @@ Used Python (Pandas) to clean, validate, and transform the raw data by handling 
 
 **Data Modeling & Dashboard Development:**
 Built a dimensional data model in Power BI, created DAX measures and KPIs to quantify frozen capital, inventory performance, and working capital release scenarios, and designed an interactive dashboard for executive reporting.
+<img width="1641" height="950" alt="image" src="https://github.com/user-attachments/assets/26547ae0-cf35-4938-bdf9-d008f119f337" />
+<img width="1641" height="951" alt="image" src="https://github.com/user-attachments/assets/57e2b4ce-c3f5-4409-a0ed-4599b84d505a" />
 
 **Business Insights & Recommendations:**
 Analyzed inventory trends to identify excess stock, prioritize high-impact SKUs, evaluate inventory reduction scenarios, and develop actionable recommendations for optimizing working capital.
