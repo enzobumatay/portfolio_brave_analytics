@@ -37,7 +37,7 @@ Built a dimensional data model in Power BI, created DAX measures and KPIs to qua
 Analyzed inventory trends to identify excess stock, prioritize high-impact SKUs, evaluate inventory reduction scenarios, and develop actionable recommendations for optimizing working capital.
 
 ### Insights and Recommendations
-Results showed approximately $21.0M in frozen capital, representing 75% of total inventory value. Scenario analysis demonstrated that reducing frozen inventory by 40% could potentially release approximately $8.4M in working capital. The solution also highlighted the highest-impact SKUs and inventory reduction opportunities to support data-driven inventory optimization decisions.<br>
+Results showed approximately $21.0M in frozen capital, representing 75% of total inventory value. Scenario analysis demonstrated that reducing frozen inventory by 40% could potentially release approximately $8.4M in working capital. The solution also highlighted the highest-impact SKUs and inventory reduction opportunities to support data-driven inventory optimization decisions.
 
 Based on these findings, the following recommendations are proposed:<br>
 1. Prioritize inventory reduction for the highest frozen-capital SKUs while maintaining target stock levels to minimize excess inventory without impacting product availability.
