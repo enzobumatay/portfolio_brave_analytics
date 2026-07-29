@@ -1,4 +1,4 @@
-# Inventory Optimization
+# Frozen Capital Inventory Analytics
 ### Problem Statement
 The company held approximately $21.0M in inventory, with nearly 75% ($15.7M) tied up as frozen capital due to excess stock beyond target inventory levels. The objective was to identify the highest-impact inventory optimization opportunities and evaluate reduction scenarios that could unlock working capital while maintaining adequate stock coverage.
 
