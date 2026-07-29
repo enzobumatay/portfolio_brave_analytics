@@ -5,7 +5,9 @@ The company held approximately $21.0M in inventory, with nearly 75% ($15.7M) tie
 ### Dataset Description
 The analysis was built on a relational inventory dataset consisting of transactional inventory records and dimensional reference tables, covering 300+ active SKUs, 50 suppliers, 4 regional distribution centers, and historical demand, purchasing, and stock movement data. The model integrates product, supplier, warehouse, and inventory transactions to evaluate excess inventory against target stock levels and quantify frozen capital across the supply chain.
 
-<img width="326" height="409" alt="image" src="https://github.com/user-attachments/assets/ef4e7d1b-d2f5-4e70-8cbd-da7ea8afcb5f" />
+<div align="center">
+  <img width="326" height="409" alt="image" src="https://github.com/user-attachments/assets/ef4e7d1b-d2f5-4e70-8cbd-da7ea8afcb5f" />
+</div>
 
 ### Analytical Approach & Methodologies
 **Dataset Familiarization:**
