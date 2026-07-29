@@ -17,9 +17,13 @@ Used Python (Pandas) to clean, validate, and transform the raw data by handling 
 **Data Modeling & Dashboard Development:**
 Built a dimensional data model in Power BI, created DAX measures and KPIs to quantify frozen capital, inventory performance, and working capital release scenarios, and designed an interactive dashboard for executive reporting.
 
-<img width="656" height="380" alt="image" src="https://github.com/user-attachments/assets/26547ae0-cf35-4938-bdf9-d008f119f337" />
+<div align="center">
+  <img width="656" height="380" alt="image" src="https://github.com/user-attachments/assets/26547ae0-cf35-4938-bdf9-d008f119f337" />
+</div>
 
-<img width="1641" height="951" alt="image" src="https://github.com/user-attachments/assets/57e2b4ce-c3f5-4409-a0ed-4599b84d505a" />
+<div align="center">
+<img width="656" height="380" alt="image" src="https://github.com/user-attachments/assets/57e2b4ce-c3f5-4409-a0ed-4599b84d505a" />
+</div>
 
 **Business Insights & Recommendations:**
 Analyzed inventory trends to identify excess stock, prioritize high-impact SKUs, evaluate inventory reduction scenarios, and develop actionable recommendations for optimizing working capital.
