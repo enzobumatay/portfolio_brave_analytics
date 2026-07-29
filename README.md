@@ -29,8 +29,10 @@ Data Cleaning & Modeling, KPI Development, Business Analysis, Executive Reportin
 
 ### Code: 
 Access the full code: [Data Cleanup](Frozen_Capital_Proj_Data_Cleanup.ipynb)
+
 <div align="center">
-<img width="546" height="377" alt="image" src="https://github.com/user-attachments/assets/a15958b3-b513-4dac-99cf-3df3deb273eb" />
+<img width="711" height="402" alt="image" src="https://github.com/user-attachments/assets/9c4b13cf-8fbd-46ee-8e2a-f31623f12fac" />
+  
 <img width="711" height="352" alt="image" src="https://github.com/user-attachments/assets/040b5556-cc8d-4878-b37c-aef442c216db" />
 </div>
 
