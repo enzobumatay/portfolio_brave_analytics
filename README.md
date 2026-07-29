@@ -28,14 +28,15 @@ Python, Power BI, Excel
 Data Cleaning & Modeling, KPI Development, Business Analysis, Executive Reporting
 
 ### Code: 
-[Data Cleanup](Frozen_Capital_Proj_Data_Cleanup.ipynb)
+Access the full code: [Data Cleanup](Frozen_Capital_Proj_Data_Cleanup.ipynb)
 <div align="center">
 <img width="546" height="377" alt="image" src="https://github.com/user-attachments/assets/a15958b3-b513-4dac-99cf-3df3deb273eb" />
 <img width="711" height="352" alt="image" src="https://github.com/user-attachments/assets/040b5556-cc8d-4878-b37c-aef442c216db" />
 </div>
 
-### Dashboard Sample: 
-[Frozen Capital Dashboard](Frozen%20Capital_dashboard.pdf)
+### Dashboard: 
+Access the dashboard in PDF: [Frozen Capital Dashboard PDF](Frozen%20Capital_dashboard.pdf)
+Access the dashboard in pbix: [Frozen Capital Dashboard PBIX](Frozen Capital.pbix)
 
 <div align="center">
   <img width="656" height="380" alt="image" src="https://github.com/user-attachments/assets/26547ae0-cf35-4938-bdf9-d008f119f337" />
