@@ -37,7 +37,7 @@ Access the full code: [Data Cleanup](Frozen_Capital_Proj_Data_Cleanup.ipynb)
 </div>
 
 ### Dashboard: 
-Access the dashboard in PDF: [Frozen Capital Dashboard PDF](Frozen%20Capital_dashboard.pdf)
+Access the dashboard in PDF: [Frozen Capital Dashboard PDF](Frozen%20Capital_dashboard.pdf)<br>
 Access the dashboard in pbix: [Frozen Capital Dashboard PBIX](Frozen Capital.pbix)
 
 <div align="center">
